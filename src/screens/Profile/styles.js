@@ -1,9 +1,16 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-  mainScreen: {
-    backgroundColor: '#F7F7F7',
+  container: {
     flex: 1,
-    alignContent: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+  },
+  nameWrapper: {
+    marginTop: 30,
+  },
+  text: {
+    fontSize: 30,
   },
 });

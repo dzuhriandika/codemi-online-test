@@ -1,6 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
-import {StyleSheet, View, Text, TouchableOpacity, Linking} from 'react-native';
-
+import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import QRCodeScanner from 'react-native-qrcode-scanner';
 
 const Home = () => {
@@ -26,11 +25,16 @@ const Home = () => {
 
   return !scan ? (
     <View style={styles.container}>
-      {result && <Text>{JSON.stringify(result, null, 2)}</Text>}
+      {result && (
+        <View>
+          <Text>Data Dari QR code</Text>
+          <Text>{JSON.stringify(result, null, 2)}</Text>
+        </View>
+      )}
       <TouchableOpacity
         style={styles.buttonTouchable}
         onPress={() => setScan(true)}>
-        <Text style={styles.buttonText}>START SCAN</Text>
+        <Text style={styles.buttonText}>Temukan Penguna Lain</Text>
       </TouchableOpacity>
     </View>
   ) : (
@@ -44,12 +48,12 @@ const Home = () => {
           <TouchableOpacity
             style={styles.buttonTouchable}
             onPress={() => scanner.current.reactive()}>
-            <Text style={styles.buttonText}>OK. Got it!</Text>
+            <Text style={styles.buttonText}>SCAN</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            style={styles.buttonTouchable}
+            style={styles.buttonTouchable2}
             onPress={() => setScan(false)}>
-            <Text style={styles.buttonText}>STOP</Text>
+            <Text style={styles.buttonText2}>KEMBALI</Text>
           </TouchableOpacity>
         </>
       }
@@ -68,18 +72,32 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 18,
     padding: 32,
-    color: '#777',
+    color: '#32CB52',
   },
   textBold: {
     fontWeight: '500',
-    color: '#000',
+    color: '#324FFF',
   },
   buttonText: {
     fontSize: 21,
-    color: 'rgb(0,122,255)',
+    color: '#fff',
+  },
+  buttonText2: {
+    fontSize: 21,
+    color: '#32CB52',
   },
   buttonTouchable: {
     padding: 16,
+    backgroundColor: '#32CB52',
+    borderRadius: 50,
+    marginTop: 20,
+  },
+  buttonTouchable2: {
+    padding: 8,
+    borderColor: '#32CB52',
+    borderWidth: 1,
+    borderRadius: 50,
+    marginTop: 20,
   },
 });
 

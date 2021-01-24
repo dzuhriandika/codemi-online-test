@@ -21,20 +21,22 @@ export default class History extends Component {
     this.setState({username: username[0], data});
   }
   render() {
-    let value = this.state.username;
+    let value = JSON.stringify(this.state.username);
+    console.log(value);
     return (
-      <View>
+      <View style={Style.container}>
         <QRCode
-          value={value}
+          value={`${value}`}
           logo={{
             uri:
               'https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/4c/cf/72/4ccf72f6-b2fa-036f-b81f-ec2574e6b30a/source/512x512bb.jpg',
           }}
-          logoSize={30}
+          logoSize={100}
           logoBackgroundColor="transparent"
+          size={300}
         />
         <View style={Style.nameWrapper}>
-          <Text style={Style.name}>{this.state.username}</Text>
+          <Text style={Style.text}>{this.state.username}</Text>
         </View>
       </View>
     );

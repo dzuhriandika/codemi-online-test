@@ -51,7 +51,7 @@ export default StyleSheet.create({
   btn: {
     marginTop: 50,
     justifyContent: 'center',
-    backgroundColor: '#FF3E71',
+    backgroundColor: '#32CB52',
     fontSize: 15,
     height: 50,
     width: 100 + '%',

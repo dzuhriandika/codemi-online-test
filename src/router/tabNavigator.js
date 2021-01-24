@@ -30,7 +30,7 @@ export const AppStack = createBottomTabNavigator(
     labeled: true,
     shifting: false,
     tabBarOptions: {
-      activeTintColor: '#00A3E0',
+      activeTintColor: '#32CB52',
       showLabel: true,
       style: {
         backgroundColor: 'white',
