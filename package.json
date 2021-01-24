@@ -1,5 +1,5 @@
 {
-  "name": "DamoGo",
+  "name": "CodemiOnlineTest",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -27,6 +27,7 @@
     "react-native-qrcode-scanner": "^1.4.1",
     "react-native-qrcode-svg": "^6.0.6",
     "react-native-reanimated": "^1.4.0",
+    "react-native-rename": "^2.7.0",
     "react-native-screens": "^2.2.0",
     "react-native-snap-carousel": "^3.8.4",
     "react-native-svg": "^11.0.1",

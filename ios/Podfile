@@ -3,7 +3,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'DamoGo' do
+target 'CodemiOnlineTest' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
@@ -14,7 +14,7 @@ target 'DamoGo' do
 
   pod 'RNPermissions', :path => '../node_modules/react-native-permissions'
 
-  target 'DamoGoTests' do
+  target 'CodemiOnlineTestTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -29,10 +29,10 @@ target 'DamoGo' do
   end
 end
 
-target 'DamoGo-tvOS' do
-  # Pods for DamoGo-tvOS
+target 'CodemiOnlineTest-tvOS' do
+  # Pods for CodemiOnlineTest-tvOS
 
-  target 'DamoGo-tvOSTests' do
+  target 'CodemiOnlineTest-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

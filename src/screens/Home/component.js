@@ -26,9 +26,9 @@ const Home = () => {
   return !scan ? (
     <View style={styles.container}>
       {result && (
-        <View>
+        <View style={styles.container}>
           <Text>Data Dari QR code</Text>
-          <Text>{JSON.stringify(result, null, 2)}</Text>
+          <Text style={styles.dataText}>{result.data}</Text>
         </View>
       )}
       <TouchableOpacity
@@ -74,9 +74,10 @@ const styles = StyleSheet.create({
     padding: 32,
     color: '#32CB52',
   },
-  textBold: {
+  dataText: {
     fontWeight: '500',
-    color: '#324FFF',
+    fontSize: 80,
+    color: '#000',
   },
   buttonText: {
     fontSize: 21,

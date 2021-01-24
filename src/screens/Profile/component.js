@@ -25,16 +25,7 @@ export default class History extends Component {
     console.log(value);
     return (
       <View style={Style.container}>
-        <QRCode
-          value={`${value}`}
-          logo={{
-            uri:
-              'https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/4c/cf/72/4ccf72f6-b2fa-036f-b81f-ec2574e6b30a/source/512x512bb.jpg',
-          }}
-          logoSize={100}
-          logoBackgroundColor="transparent"
-          size={300}
-        />
+        <QRCode value={`${value}`} size={300} />
         <View style={Style.nameWrapper}>
           <Text style={Style.text}>{this.state.username}</Text>
         </View>
